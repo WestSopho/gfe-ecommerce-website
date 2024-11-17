@@ -9,7 +9,7 @@ type CustomLinkProps = {
 
 export default function CustomLink({text, href}: CustomLinkProps) {
   return (
-    <Link href={href} className="text-sm desktop:text-base desktop:font-[500]">
+    <Link href={href} className="text-sm text-neutral-600 font-medium desktop:text-base desktop:font-[500]">
         {text}
     </Link>
   )
