@@ -1,26 +1,30 @@
 import "./globals.css";
 
-import { Noto_Sans } from 'next/font/google';
+import MobileNavMenu from "@/components/Navbar/MobileNavMenu";
+import MenuNavProvider from "@/context/MenuNavContext";
 
-const noto = Noto_Sans(
-    {
-        variable: "--noto-sans",
-        subsets: ["latin"],
-    }
-);
+import { Noto_Sans } from "next/font/google";
+
+const noto = Noto_Sans({
+    variable: "--noto-sans",
+    subsets: ["latin"],
+});
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`antialiased bg-linear-background min-h-screen ${noto.className}`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body
+                className={`min-h-screen bg-linear-background antialiased ${noto.className}`}
+            >
+                <MenuNavProvider>
+                    <MobileNavMenu />
+                    {children}
+                </MenuNavProvider>
+            </body>
+        </html>
+    );
 }
