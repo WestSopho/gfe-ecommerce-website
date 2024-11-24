@@ -47,7 +47,7 @@ function Links({ header, links, lgColStart }: LinksProps) {
         <div
             className={clsx(
                 "col-span-full md:col-span-3",
-                lgColStart && `lg:col-start-${lgColStart}`,
+                lgColStart && `lg:col-start-${String(lgColStart)}`,
             )}
         >
             {/* Flex Wrapper */}
