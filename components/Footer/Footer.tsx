@@ -42,6 +42,10 @@ const shopCollections = [
         name: "Cozy Comfort",
         href: "/",
     },
+    {
+        name: "Fresh Fusion",
+        href: "/",
+    }
 ];
 
 type LinksProps = {
