@@ -45,7 +45,7 @@ const shopCollections = [
     {
         name: "Fresh Fusion",
         href: "/",
-    }
+    },
 ];
 
 type LinksProps = {
@@ -64,7 +64,7 @@ function Links({ header, links, lgColStart }: LinksProps) {
         >
             {/* Flex Wrapper */}
             <div className="flex flex-col gap-y-4">
-                <p className="text-sm text-neutral-500 uppercase">{header}</p>
+                <p className="text-sm uppercase text-neutral-500">{header}</p>
                 {/* Links Wrapper */}
                 <div className="flex flex-col gap-y-3">
                     {links.map((category, index) => {
